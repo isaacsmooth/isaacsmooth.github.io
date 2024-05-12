@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Studio Website</title>
+    <link rel="icon" href="https://th.bing.com/th/id/OIP.fsC2wvWSVKyJ2rFEA5YelgHaGl?w=224&h=193&c=7&r=0&o=5&pid=1.7">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logopicture">
+                <img src="https://th.bing.com/th/id/OIP.fsC2wvWSVKyJ2rFEA5YelgHaGl?w=224&h=193&c=7&r=0&o=5&pid=1.7" alt="Smooth Studio Logo">
+                <h1>Smooth Studio</h1>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+                <li><a href="plugins.html">Plugins</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="https://www.google.com/search?q=fl+studio&rlz=1C1CHBF_enUS1040US1040&oq=fl+studio&gs_lcrp=EgZjaHJvbWUyDggAEEUYJxg5GIAEGIoFMgwIARAAGBQYhwIYgAQyEggCEAAYQxiDARixAxiABBiKBTINCAMQABiDARixAxiABDIPCAQQABhDGLEDGIAEGIoFMgwIBRAAGEMYgAQYigUyBwgGEAAYgAQyBggHEAUYQKgCALACAA&sourceid=chrome&ie=UTF-8" target="_blank">FL Studio</a></li>
+                <li><a href="https://www.google.com/search?q=bandlab&rlz=1C1CHBF_enUS1040US1040&oq=bandla&gs_lcrp=EgZjaHJvbWUqDAgAECMYJxiABBiKBTIMCAAQIxgnGIAEGIoFMhUIARAuGEMYxwEYsQMY0QMYgAQYigUyBggCEEUYOTISCAMQABhDGIMBGLEDGIAEGIoFMg8IBBAAGBQYhwIYsQMYgAQyDAgFEAAYQxiABBiKBTIPCAYQABhDGLEDGIAEGIoFMgwIBxAAGEMYgAQYigUyDQgIEAAYgwEYsQMYgAQyEggJEAAYQxiDARixAxiABBiKBagCCLACAQ&sourceid=chrome&ie=UTF-8" target="_blank">BandLab</a></li>
+                <li><a href="https://www.google.com/search?q=voloco+vocal+recording+studio" target="_blank">Voloco Vocal Recording Studio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+        <div class="hero">
+            <h2>Make Music with Smooth Studio</h2>
+            <p>Produce, edit, and mix your tracks with our powerful software.</p>
+        </div>
+
+        <section id="pictures">
+            <h2>Our Gallery</h2>
+            <div class="gallery">
+                <img src="https://th.bing.com/th/id/OIP.rGtKVh1x0cQZTSy9sq2xlwHaE8?w=260&h=180&c=7&r=0&o=5&pid=1.7" alt="Image 1">
+                <img src="https://th.bing.com/th/id/OIP.C0yGfh1V4wV9Bz8gVk_60wHaE8?w=279&h=186&c=7&r=0&o=5&pid=1.7" alt="Image 2">
+                <img src="https://th.bing.com/th/id/OIP.clwb6DrwjbSzOAsa2IO0jQHaEK?w=366&h=180&c=7&r=0&o=5&pid=1.7" alt="Image 3">
+            </div>
+        </section>
+
+
+    <footer >
+        &copy; 2024 Smooth Studio. All rights reserved.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+// JavaScript for smooth scrolling navigation
+document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll('a[href^="#"]');
+    
+    for (const link of links) {
+        link.addEventListener("click", clickHandler);
+    }
+    
+    function clickHandler(e) {
+        e.preventDefault();
+        const href = this.getAttribute("href");
+        const offsetTop = document.querySelector(href).offsetTop;
+    
+        scroll({
+            top: offsetTop,
+            behavior: "smooth"
+        });
+    }
+});
+
