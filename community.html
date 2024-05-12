@@ -21,6 +21,9 @@
                 <li><a href="plugins.html">Plugins</a></li>
                 <li><a href="features.html">Features</a></li>
                 <li><a href="community.html">Community</a></li>
+                <li><a href="https://www.google.com/search?q=fl+studio&rlz=1C1CHBF_enUS1040US1040&oq=fl+studio&gs_lcrp=EgZjaHJvbWUyDggAEEUYJxg5GIAEGIoFMgwIARAAGBQYhwIYgAQyEggCEAAYQxiDARixAxiABBiKBTINCAMQABiDARixAxiABDIPCAQQABhDGLEDGIAEGIoFMgwIBRAAGEMYgAQYigUyBwgGEAAYgAQyBggHEAUYQKgCALACAA&sourceid=chrome&ie=UTF-8" target="_blank">FL Studio</a></li>
+                <li><a href="https://www.google.com/search?q=bandlab&rlz=1C1CHBF_enUS1040US1040&oq=bandla&gs_lcrp=EgZjaHJvbWUqDAgAECMYJxiABBiKBTIMCAAQIxgnGIAEGIoFMhUIARAuGEMYxwEYsQMY0QMYgAQYigUyBggCEEUYOTISCAMQABhDGIMBGLEDGIAEGIoFMg8IBBAAGBQYhwIYsQMYgAQyDAgFEAAYQxiABBiKBTIPCAYQABhDGLEDGIAEGIoFMgwIBxAAGEMYgAQYigUyDQgIEAAYgwEYsQMYgAQyEggJEAAYQxiDARixAxiABBiKBagCCLACAQ&sourceid=chrome&ie=UTF-8" target="_blank">BandLab</a></li>
+                <li><a href="https://www.google.com/search?q=voloco+vocal+recording+studio" target="_blank">Voloco Vocal Recording Studio</a></li>
             </ul>
         </nav>    </header>
 
@@ -44,3 +47,23 @@
     <script src="script.js"></script>
 </body>
 </html>
+// JavaScript for smooth scrolling navigation
+document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll('a[href^="#"]');
+    
+    for (const link of links) {
+        link.addEventListener("click", clickHandler);
+    }
+    
+    function clickHandler(e) {
+        e.preventDefault();
+        const href = this.getAttribute("href");
+        const offsetTop = document.querySelector(href).offsetTop;
+    
+        scroll({
+            top: offsetTop,
+            behavior: "smooth"
+        });
+    }
+});
+
